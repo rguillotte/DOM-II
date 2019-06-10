@@ -53,6 +53,48 @@ window.addEventListener('keydown', (e)=>{
     }
 })
 
+window.addEventListener('resize', (e) =>{
+    alert(`You've resized me!!!`);
+})
+
+function wheelZoom(event) {
+    var y = event.deltaY;
+    var currentSize = event.target.style.width;
+    if (y > 0) {
+      newSize = parseInt(currentSize) + 10;
+    } else {
+      newSize = parseInt(currentSize) - 10;
+    }
+    event.target.style.width = newSize + "px";
+    event.target.style.height = newSize + "px";
+  }
+
+headerImg.addEventListener('wheel', (wheelZoom));
+
+let scale = 1;
+
+function wheelZoom(event) {
+    event.preventDefault();
+  
+    scale += event.deltaY * -0.01;
+  
+    // Restrict scale
+    scale = Math.min(Math.max(.125, scale), 5);
+  
+    // Apply scale transform
+    headerImg.style.transform = `scale(${scale})`;
+
+  }
+  
+
+
+
+
+
+
+
+
+
 
 
 
