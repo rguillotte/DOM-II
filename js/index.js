@@ -111,6 +111,17 @@ function wheelZoom(event) {
         })
   })
 
+  let textContainer = document.querySelector('.text-content');
+  textContainer.addEventListener('click', (e)=>{
+      textContainer.style.backgroundColor = 'lightgrey';
+  })
+
+  let textHeader = document.querySelector('.text-content h2');
+  textHeader.addEventListener('click',(e)=>{
+      e.stopPropagation();
+      textHeader.style.backgroundColor = 'darkgrey';
+  })
+
 
 
 
