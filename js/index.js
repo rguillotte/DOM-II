@@ -86,14 +86,6 @@ function wheelZoom(event) {
 
   }
 
-  window.addEventListener('keypress', (e)=>{
-      if(e.key === 'h'){
-          alert(`Hello`);
-      }
-      if(e.key === 'b'){
-          alert(`Bye!`);
-      }
-  })
 
   let dragImg = document.querySelector('.content-section .img-content');
   console.log(dragImg);
@@ -120,6 +112,29 @@ function wheelZoom(event) {
   textHeader.addEventListener('click',(e)=>{
       e.stopPropagation();
       textHeader.style.backgroundColor = 'darkgrey';
+  })
+
+  let mainContainer = document.querySelector('html');
+
+  mainContainer.addEventListener('keypress', (e)=>{
+      if(e.key === 'b'){
+          mainContainer.style.backgroundColor = 'blue';
+      }
+      if(e.key === 'r'){
+        mainContainer.style.backgroundColor = 'red';
+      }
+      if(e.key === 'g'){
+        mainContainer.style.backgroundColor = 'green';
+      }
+      if(e.key === 'y'){
+        mainContainer.style.backgroundColor = 'yellow';
+      }
+      if(e.key === 'p'){
+        mainContainer.style.backgroundColor = 'purple';
+      }
+      if(e.key === 'o'){
+        mainContainer.style.backgroundColor = 'orange';
+      }
   })
 
 
