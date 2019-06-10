@@ -38,6 +38,17 @@ bottomImg.addEventListener('click', (e)=>{
     bottomImg.classList.toggle('large');
 })
 
+window.addEventListener('scroll', (e)=>{
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+
+    if(Math.ceil(scrolled) === scrollable){
+        alert(`You've reached the bottom!`)
+    }
+
+    console.log(scrolled);
+})
+
 
 
 
