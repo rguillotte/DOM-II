@@ -103,6 +103,14 @@ function wheelZoom(event) {
         dragImg.style.order = "-1";
   })
 
+  let navItems = document.querySelectorAll('a');
+
+  navItems.forEach((item)=>{
+        item.addEventListener('click',(e)=>{
+            e.preventDefault();
+        })
+  })
+
 
 
 
