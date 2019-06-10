@@ -45,9 +45,14 @@ window.addEventListener('scroll', (e)=>{
     if(Math.ceil(scrolled) === scrollable){
         alert(`You've reached the bottom!`)
     }
-
-    console.log(scrolled);
 })
+
+window.addEventListener('keydown', (e)=>{
+    if (e.key === 'a'){
+        alert(`AHHHHHHH!`);
+    }
+})
+
 
 
 
