@@ -85,7 +85,23 @@ function wheelZoom(event) {
     headerImg.style.transform = `scale(${scale})`;
 
   }
+
+  window.addEventListener('keypress', (e)=>{
+      if(e.key === 'h'){
+          alert(`Hello`);
+      }
+      if(e.key === 'b'){
+          alert(`Bye!`);
+      }
+  })
+
+  let dragImg = document.querySelector('.content-section .img-content');
+  console.log(dragImg);
   
+  firstImg.addEventListener('drag', (e)=>{
+      console.log(e);
+        dragImg.style.order = "-1";
+  })
 
 
 
